@@ -1,0 +1,26 @@
+<h1>Listing  All Tb Cases</h1>
+
+<table class="table_list">
+  <tr>
+    <th>Date reported</th>
+    <th>Patient number</th>
+    <th>Availability of drugs</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @tbcases.each do |tbcase| %>
+  <tr>
+    <td><%= tbcase.date_reported %></td>
+    <td><%= tbcase.patient_number %></td>
+    <td><%= tbcase.availability_of_drugs %></td>
+    <td><%= link_to 'Show', tbcase %></td>
+    <td><%= link_to 'Edit', edit_tbcase_path(tbcase) %></td>
+    <td><%= link_to 'Destroy', tbcase, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+

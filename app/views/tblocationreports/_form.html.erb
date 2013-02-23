@@ -1,0 +1,17 @@
+<%= form_for(@tblocationreport) do |f| %>
+  <% if @tblocationreport.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@tblocationreport.errors.count, "error") %> prohibited this tblocationreport from being saved:</h2>
+
+      <ul>
+      <% @tblocationreport.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

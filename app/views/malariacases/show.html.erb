@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Patient:</b>
+  <%= @malariacase.patient_id %>
+</p>
+
+<p>
+  <b>Date diagnosed:</b>
+  <%= @malariacase.date_diagnosed %>
+</p>
+
+<p>
+  <b>Communityworker:</b>
+  <%= @malariacase.communityworker_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_malariacase_path(@malariacase) %> |
+<%= link_to 'Back', malariacases_path %>

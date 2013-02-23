@@ -1,0 +1,17 @@
+<%= form_for(@hivcontraceptionreport) do |f| %>
+  <% if @hivcontraceptionreport.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@hivcontraceptionreport.errors.count, "error") %> prohibited this hivcontraceptionreport from being saved:</h2>
+
+      <ul>
+      <% @hivcontraceptionreport.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

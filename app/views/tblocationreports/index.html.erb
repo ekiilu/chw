@@ -1,0 +1,10 @@
+<div class="report_dlg">
+<%= form_tag "/tblocationreports/" , :method => "get" do %>
+<%= collection_select(:location,:id,@locations,:id,:name,options ={:prompt => "Select a Location"}) %>
+
+<%= select_year 2009 %>
+  <%= submit_tag "Generate  Tb Report" %>
+<% end %>
+</div>
+
+<%= image_tag("tb_location_report.png",:alt => "Tb Location Report") %>

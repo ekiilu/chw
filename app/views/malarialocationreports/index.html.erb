@@ -1,0 +1,11 @@
+<div class="report_dlg">
+<%= form_tag "/malarialocationreports/" , :method => "get" do %>
+<%= collection_select(:location,:id,@locations,:id,:name,options ={:prompt => "Select a Location"}) %>
+
+<%= select_year 2009 %>
+  <%= submit_tag "Generate Malaria Report" %>
+<% end %>
+
+</div>
+<%= image_tag("malaria_location_report_pie.png",:alt => "Malaria Location Reporting") %>
+

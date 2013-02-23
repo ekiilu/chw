@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Date reported:</b>
+  <%= @dotsmember.date_reported %>
+</p>
+
+<p>
+  <b>Patient number:</b>
+  <%= @dotsmember.patient_number %>
+</p>
+
+<p>
+  <b>Patient phone:</b>
+  <%= @dotsmember.patient_phone %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%= @dotsmember.status %>
+</p>
+
+
+<%= link_to 'Edit', edit_dotsmember_path(@dotsmember) %> |
+<%= link_to 'Back', dotsmembers_path %>

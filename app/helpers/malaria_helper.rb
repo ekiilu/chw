@@ -1,0 +1,2 @@
+module MalariaHelper
+end

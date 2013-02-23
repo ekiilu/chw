@@ -1,0 +1,23 @@
+<h1>Listing sms</h1>
+
+<table>
+  <tr>
+    <th>Phone</th>
+    <th>Text</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @textmessage.each do |sm| %>
+  <tr>
+    <td><%= sm.phone %></td>
+    <td><%= sm.message %></td>
+    <td><%= link_to 'Show', sm %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+

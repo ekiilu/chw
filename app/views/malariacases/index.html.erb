@@ -1,0 +1,17 @@
+<h1>Reported Malaria Cases</h1>
+
+<table class="table_list">
+  <tr>
+    <th>Patient Number</th>
+    <th>Date diagnosed</th>
+  </tr>
+
+<% @malariacases.each do |malariacase| %>
+  <tr>
+    <td><%= malariacase.patient_number %></td>
+    <td><%= malariacase.date_diagnosed %></td>
+ 
+  </tr>
+<% end %>
+</table>
+<br />

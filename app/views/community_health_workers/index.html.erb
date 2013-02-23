@@ -1,0 +1,35 @@
+<h1>Listing community_health_workers</h1>
+
+<table>
+  <tr>
+    <th>Firstname</th>
+    <th>Lastname</th>
+    <th>Middlename</th>
+    <th>Phonenumber</th>
+    <th>Nationalid</th>
+    <th>Gender</th>
+    <th>Village</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @community_health_workers.each do |community_health_worker| %>
+  <tr>
+    <td><%= community_health_worker.firstname %></td>
+    <td><%= community_health_worker.lastname %></td>
+    <td><%= community_health_worker.middlename %></td>
+    <td><%= community_health_worker.phonenumber %></td>
+    <td><%= community_health_worker.nationalid %></td>
+    <td><%= community_health_worker.gender %></td>
+    <td><%= community_health_worker.village %></td>
+    <td><%= link_to 'Show', community_health_worker %></td>
+    <td><%= link_to 'Edit', edit_community_health_worker_path(community_health_worker) %></td>
+    <td><%= link_to 'Destroy', community_health_worker, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Community health worker', new_community_health_worker_path %>

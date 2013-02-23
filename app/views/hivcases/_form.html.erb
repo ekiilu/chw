@@ -1,0 +1,33 @@
+<%= form_for(@hivcase) do |f| %>
+  <% if @hivcase.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@hivcase.errors.count, "error") %> prohibited this hivcase from being saved:</h2>
+
+      <ul>
+      <% @hivcase.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :date_diagnosed %><br />
+    <%= f.date_select :date_diagnosed %>
+  </div>
+  <div class="field">
+    <%= f.label :patient_number %><br />
+    <%= f.text_field :patient_number %>
+  </div>
+  <div class="field">
+    <%= f.label :availability_of_contraceptives %><br />
+    <%= f.text_field :availability_of_contraceptives %>
+  </div>
+  <div class="field">
+    <%= f.label :availability_of_drugs %><br />
+    <%= f.text_field :availability_of_drugs %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

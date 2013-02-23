@@ -1,0 +1,2 @@
+module HivlocationreportsHelper
+end

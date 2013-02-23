@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>First Name:</b>
+  <%= @patient.firstname %>
+</p>
+
+<p>
+  <b>Middle Name:</b>
+  <%= @patient.middlename %>
+</p>
+
+<p>
+  <b>Last Name:</b>
+  <%= @patient.lastname %>
+</p>
+
+<p>
+  <b>Year of birth:</b>
+  <%= @patient.year_of_birth %>
+</p>
+
+<p>
+  <b>Community Worker :</b>
+  <%= @patient.villageworker.firstname %>
+</p>
+<p>
+
+  <b>Location :</b>
+  <%= @patient.villageworker.location.name%>
+</p>
+
+

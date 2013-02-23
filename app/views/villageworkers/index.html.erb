@@ -1,0 +1,35 @@
+<h1>Community Health Workers</h1>
+
+<table class="table_list">
+  <tr>
+    <th>Firstname</th>
+    <th>Lastname</th>
+    <th>Middlename</th>
+    <th>Phonenumber</th>
+    <th>Nationalid</th>
+    <th>Male</th>
+    <th>Location Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @villageworkers.each do |villageworker| %>
+  <tr>
+    <td><%= villageworker.firstname %></td>
+    <td><%= villageworker.lastname %></td>
+    <td><%= villageworker.middlename %></td>
+    <td><%= villageworker.phonenumber %></td>
+    <td><%= villageworker.nationalid %></td>
+    <td><%= villageworker.male %></td>
+    <td><%= villageworker.location.name %></td>
+    <td><%= link_to 'Show', villageworker %></td>
+    <td><%= link_to 'Edit', edit_villageworker_path(villageworker) %></td>
+    <td><%= link_to 'Destroy', villageworker, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+

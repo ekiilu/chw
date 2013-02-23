@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Date reported:</b>
+  <%= @tbcase.date_reported %>
+</p>
+
+<p>
+  <b>Patient number:</b>
+  <%= @tbcase.patient_number %>
+</p>
+
+<p>
+  <b>Availability of drugs:</b>
+  <%= @tbcase.availability_of_drugs %>
+</p>
+
+
+<%= link_to 'Edit', edit_tbcase_path(@tbcase) %> |
+<%= link_to 'Back', tbcases_path %>

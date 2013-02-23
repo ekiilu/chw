@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @user.name %>
+</p>
+
+<p>
+  <b>Date Created</b>
+  <%= @user.created_at %>
+</p>
+
+<%= link_to 'Edit User Details', edit_user_path(@user) %> |
+

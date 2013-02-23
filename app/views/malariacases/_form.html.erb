@@ -1,0 +1,32 @@
+<%= form_for(@malariacase) do |f| %>
+  <% if @malariacase.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@malariacase.errors.count, "error") %> prohibited this malariacase from being saved:</h2>
+
+      <ul>
+      <% @malariacase.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :patient_id %><br />
+    <%= f.number_field :patient_id %>
+  </div>
+  <div class="field">
+    <%= f.label :date_diagnosed %><br />
+    <%= f.date_select :date_diagnosed %>
+  </div>
+  <div class="field">
+    <%= f.label :communityworker_id %><br />
+    <%= f.number_field :communityworker_id %>
+
+
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,2 @@
+module TblocationreportsHelper
+end

@@ -1,0 +1,24 @@
+<h1>Text Messages Received</h1>
+
+<table class="table_list">
+  <tr>
+    <th>Phone</th>
+    <th>Message</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @smsmessages.each do |smsmessage| %>
+  <tr>
+    <td><%= smsmessage.phone %></td>
+    <td><%= smsmessage.message %></td>
+    <td><%= link_to 'Show', smsmessage %></td>
+    <td><%= link_to 'Edit', edit_smsmessage_path(smsmessage) %></td>
+    <td><%= link_to 'Destroy', smsmessage, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+

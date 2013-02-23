@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Firstname:</b>
+  <%= @community_health_worker.firstname %>
+</p>
+
+<p>
+  <b>Lastname:</b>
+  <%= @community_health_worker.lastname %>
+</p>
+
+<p>
+  <b>Middlename:</b>
+  <%= @community_health_worker.middlename %>
+</p>
+
+<p>
+  <b>Phonenumber:</b>
+  <%= @community_health_worker.phonenumber %>
+</p>
+
+<p>
+  <b>Nationalid:</b>
+  <%= @community_health_worker.nationalid %>
+</p>
+
+<p>
+  <b>Gender:</b>
+  <%= @community_health_worker.gender %>
+</p>
+
+<p>
+  <b>Village:</b>
+  <%= @community_health_worker.village %>
+</p>
+
+
+<%= link_to 'Edit', edit_community_health_worker_path(@community_health_worker) %> |
+<%= link_to 'Back', community_health_workers_path %>

@@ -1,0 +1,47 @@
+class Patient
+
+#validate the patient command 
+	if validNewPatientCommand?
+		@patientnames = @commands[1].split(' ')
+		#if the size of the patient names is just two , then we assume that the first item in array is the first name, the other 
+		#item is the last name of the patient 
+
+		#First lets validate the size of the patient name if its less than two then their is an error , if its large than three 		then
+		#Their is an error 
+		if @patientnames.size <2 or @patientnames.size > 3 
+			return "The patient name is invalid, Enter in this format Firstname Middlename LastName, Thank you"
+		end 
+		#If the patient names are valids then Create a new patient and save his/her details in the database 
+		#If there are only two names for the patient then lets save the names in the database
+		@newpatient = Patient.new
+		@newpatient.firstname = @patientnames[0]
+		
+		if @patientnames.size == 2
+			@newpatient.lastname = @patientnames[1]
+		else 
+			@newpatient.middlename = @patientnames[1]
+			@newpatient.lastname = @patientnames[2]				
+		end 
+		#Save the other details of the patient 
+		@newpatient.year_of_birth = Time.local(2000,3,3)
+		@newpatient.date_added = Time.now
+		
+		@communityworkerw = Villageworker.where("phonenumber =?",@phone_number)
+		
+		@newpatient.villageworker = @communityworkerw[0]
+		
+		@patient_id = generatePatientId
+			
+		#Assign the patient Id to the generated 
+		@newpatient.patient_number = @patient_id 
+
+		#Now lets save the details of the patient in the database 
+		@newpatient.save 
+		#Tell the community health worker the patient has been successfully been saved in the database
+		
+		return "#{@newpatient.firstname} . #{@newpatient.lastname[0] } , has been given Patient ID: #{@patient_id}
+		     . Thank you for registering"
+	end 
+	return "To register a new patient please send your sms like this example format : New Patient,James Kamau,M,1980" 
+end 
+

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Chw</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= stylesheet_link_tag    "style", :media => "all" %>
+
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div class="header">
+<div class="logo">
+<%= image_tag("CHW-Good.jpg") %>
+</div>
+<div class="user_login">
+Welcome 
+<%= session[:user_name] %>
+<%= link_to "Logout","logout"%>
+</div>
+</div>
+
+
+
+<div class="top_menu">
+<%= render "admin/menu" %>
+</div>

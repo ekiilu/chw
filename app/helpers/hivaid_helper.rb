@@ -1,0 +1,2 @@
+module HivaidHelper
+end

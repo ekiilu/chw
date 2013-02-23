@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Date diagnosed:</b>
+  <%= @hivcase.date_diagnosed %>
+</p>
+
+<p>
+  <b>Patient number:</b>
+  <%= @hivcase.patient_number %>
+</p>
+
+<p>
+  <b>Availability of contraceptives:</b>
+  <%= @hivcase.availability_of_contraceptives %>
+</p>
+
+<p>
+  <b>Availability of drugs:</b>
+  <%= @hivcase.availability_of_drugs %>
+</p>
+
+
+<%= link_to 'Edit', edit_hivcase_path(@hivcase) %> |
+<%= link_to 'Back', hivcases_path %>

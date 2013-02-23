@@ -1,0 +1,26 @@
+<h1>Reported Hiv Cases</h1>
+
+<table class="table_list">
+  <tr>
+    <th>Date diagnosed</th>
+    <th>Patient number</th>
+    <th>Availability of contraceptives</th>
+    <th>Availability of drugs</th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @hivcases.each do |hivcase| %>
+  <tr>
+    <td><%= hivcase.date_diagnosed %></td>
+    <td><%= hivcase.patient_number %></td>
+    <td><%= hivcase.availability_of_contraceptives %></td>
+    <td><%= hivcase.availability_of_drugs %></td>
+    <td><%= link_to 'Show', hivcase %></td>
+    <td><%= link_to 'Edit', edit_hivcase_path(hivcase) %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+

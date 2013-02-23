@@ -1,0 +1,30 @@
+<h1>Listing patients</h1>
+
+<table class="table_list">
+  <tr>
+    <th>First Name</th>
+    <th>Middle Name</th>
+    <th>Last Name</th>
+    <th>Year of birth</th>
+    <th>Date Added</th>
+    <th>Patient Number </th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @patients.each do |patient| %>
+  <tr>
+    <td><%= patient.firstname %></td>
+    <td><%= patient.middlename %></td>
+    <td><%= patient.lastname %></td>
+    <td><%= patient.year_of_birth %></td>
+    <td><%= patient.date_added %></td>
+    <td><%= patient.patient_number %> </td>
+
+    <td><%= link_to 'Show', patient %></td>
+    <td><%= link_to 'Edit', edit_patient_path(patient) %></td>
+  </tr>
+<% end %>
+</table>
+<br />

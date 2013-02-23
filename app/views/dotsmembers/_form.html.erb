@@ -1,0 +1,33 @@
+<%= form_for(@dotsmember) do |f| %>
+  <% if @dotsmember.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@dotsmember.errors.count, "error") %> prohibited this dotsmember from being saved:</h2>
+
+      <ul>
+      <% @dotsmember.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :date_reported %><br />
+    <%= f.date_select :date_reported %>
+  </div>
+  <div class="field">
+    <%= f.label :patient_number %><br />
+    <%= f.text_field :patient_number %>
+  </div>
+  <div class="field">
+    <%= f.label :patient_phone %><br />
+    <%= f.text_field :patient_phone %>
+  </div>
+  <div class="field">
+    <%= f.label :status %><br />
+    <%= f.text_field :status %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

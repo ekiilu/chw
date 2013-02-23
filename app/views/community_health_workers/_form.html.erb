@@ -1,0 +1,45 @@
+<%= form_for(@community_health_worker) do |f| %>
+  <% if @community_health_worker.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@community_health_worker.errors.count, "error") %> prohibited this community_health_worker from being saved:</h2>
+
+      <ul>
+      <% @community_health_worker.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :firstname %><br />
+    <%= f.text_field :firstname %>
+  </div>
+  <div class="field">
+    <%= f.label :lastname %><br />
+    <%= f.text_field :lastname %>
+  </div>
+  <div class="field">
+    <%= f.label :middlename %><br />
+    <%= f.text_field :middlename %>
+  </div>
+  <div class="field">
+    <%= f.label :phonenumber %><br />
+    <%= f.text_field :phonenumber %>
+  </div>
+  <div class="field">
+    <%= f.label :nationalid %><br />
+    <%= f.text_field :nationalid %>
+  </div>
+  <div class="field">
+    <%= f.label :gender %><br />
+    <%= f.text_field :gender %>
+  </div>
+  <div class="field">
+    <%= f.label :village %><br />
+    <%= f.text_field :village %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
